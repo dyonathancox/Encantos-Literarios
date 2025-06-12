@@ -84,7 +84,7 @@ section.hero {
 
 @media (max-width: 430px) {
   section.hero {
-    height: auto;
+    max-height: 46.4rem;
     nav {
       margin-top: 2rem;
       padding: 2rem;
@@ -114,9 +114,8 @@ section.hero {
       }
 
       .book {
-        top: 0;
         width: 100%;
-        height: 464px;
+        min-height: 46.4rem;
         background: url(../assets/img-mobile.png) no-repeat;
         background-size: cover;
       }
