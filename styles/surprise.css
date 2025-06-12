@@ -50,21 +50,48 @@
 }
 
 @media (max-width: 430px) {
-  .surprise {
-    width: 33.5rem;
-    margin-top: 11.3rem;
-    margin-inline: auto;
-    text-align: center;
-
-    & p {
-      color: var(--text-body);
-      font: var(--txt-1-6) / 140% sans-serif;
-      letter-spacing: 0%;
+  .sc-surprise {
+    margin-top: 10rem;
+    .surprise {
+      width: 33.5rem;
+      margin-inline: auto;
       text-align: center;
 
-      &strong {
-        color: var(--pink-base);
-        font-weight: 600;
+      span {
+        & p {
+          color: var(--text-body);
+          font: var(--txt-1-6) / 140% sans-serif;
+          letter-spacing: 0%;
+          text-align: center;
+
+          &strong {
+            color: var(--pink-base);
+            font-weight: 600;
+          }
+        }
+      }
+
+      .icons {
+        position: absolute;
+        width: 4rem;
+        height: auto;
+      }
+      .ic-1 {
+        bottom: -5rem;
+        left: 0;
+        transform: rotate(-30deg);
+      }
+
+      .ic-2 {
+        bottom: -5rem;
+        right: 0;
+        transform: rotate(15deg);
+      }
+
+      .ic-3 {
+        top: -5rem;
+        left: 72%;
+        transform: rotate(15deg);
       }
     }
   }
