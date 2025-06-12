@@ -1,6 +1,6 @@
 section.hero {
-    max-width: 144rem;
     width: 100%;
+    max-width: 155rem;
     height: 94.8rem;
     margin-inline: auto;
 
@@ -85,6 +85,7 @@ section.hero {
     }
 
     .surprise {
+        margin-top: 21rem;
         margin-inline: auto;
         text-align: center;
 
@@ -144,6 +145,7 @@ section.hero {
 
         .surprise {
             width: 33.5rem;
+            margin-top: 10rem;
             margin-inline: auto;
             text-align: center;
 
