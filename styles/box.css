@@ -7,6 +7,7 @@
     & span {
       display: flex;
       align-items: center;
+      justify-content: center;
 
       h2 {
         font-size: var(--title-sm);
@@ -28,6 +29,15 @@
         font: var(--txt-1-6) / 140% sans-serif;
         color: var(--text-body);
         margin-top: .5rem;
+    }
+  }
+
+
+  .content-book{
+    margin-top: 22.2rem;
+    .book{
+      width: 100%;
+      height: 61.7rem;
     }
   }
 }
