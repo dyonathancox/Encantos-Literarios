@@ -1,0 +1,34 @@
+.box {
+  min-height: 100vh;
+
+  .title-box {
+    text-align: center;
+
+    & span {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        font-size: var(--title-sm);
+        color: var(--text-title);
+        margin-inline: 1.6rem;
+      }
+
+      .star-icon{
+        width: 3.2rem;
+        height: 3.2rem;
+
+        filter: drop-shadow(0 0 0.5rem #a06beb59) 
+          drop-shadow(0 0 1.5rem #a667ff5b) 
+          drop-shadow(0 0 3rem #c59bff8a);
+
+      }
+    }
+    & p{
+        font: var(--txt-1-6) / 140% sans-serif;
+        color: var(--text-body);
+        margin-top: .5rem;
+    }
+  }
+}
+
