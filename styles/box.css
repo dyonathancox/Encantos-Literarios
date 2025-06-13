@@ -67,32 +67,34 @@
       img {
         position: absolute;
         opacity: 0;
-        transition: all 0.4s ease-in-out;
-      }
-
-      img[src*='bookmark-purple'] {
-        top: 0;
-        right: -46.8rem;
-        transform: rotate(22deg) translateY(0px);
-      }
-      img[src*='bookmark-yellow'] {
-        top: -10rem;
-        right: -36.8rem;
-        transform: rotate(12deg) translateY(5px);
-      }
-      img[src*='pin'] {
-        width: 100%;
-        max-width: 22.2rem;
-        height: auto;
-
-        top: 84%;
-        right: 58%;
-        transform: rotate(-12deg) translateY(5px);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform: scale(0.5) translateY(30px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
       }
     }
 
-    &:hover .book-op img {
-      opacity: 1;
+    &:hover .book-op {
+      img[src*='bookmark-purple'] {
+        opacity: 1;
+
+        transform: translate(25rem, -18rem) scale(1) rotate(22deg);
+        transition-delay: 0.1s;
+      }
+
+      img[src*='bookmark-yellow'] {
+        opacity: 1;
+        transform: translate(28.5rem, -38rem) scale(1) rotate(12deg);
+        transition-delay: 0s;
+      }
+
+      img[src*='pin'] {
+        opacity: 1;
+        width: 22.2rem;
+        transform: translate(-18rem, 20rem) scale(1) rotate(-12deg);
+        transition-delay: 0.2s;
+      }
     }
   }
 }
