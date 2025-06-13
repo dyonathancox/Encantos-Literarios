@@ -29,6 +29,7 @@
       margin-top: 0.5rem;
     }
   }
+
   /*serve para deixar o conteudo do position absolute "preso" dentro dele, o conteúdo do absoluto vai ser absoluto dentro do conteudo relativo (pai)*/
   .content-book {
     position: relative;
@@ -68,10 +69,47 @@
         position: absolute;
         opacity: 0;
         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        transform: scale(0.5) translateY(30px);
+
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
+      }
+
+      .label {
+        color: var(--text-label);
+        font: var(--txt-1-6) / 140% sans-serif;
+        max-width: fit-content;
+
+        & span {
+          position: relative;
+        }
+
+        span::after {
+          content: '';
+          position: absolute;
+          width: 18rem;
+          height: 8rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      .top-left span::after {
+        background-image: url(../assets//arrows/arrow-top.svg);
+        bottom: -80px;
+        left: -50px;
+        transform: rotate(-25deg);
+      }
+      .bottom-left {
+        background-image: url(../assets//arrows/arrow-left.svg);
+        top: -70px;
+        left: 60px;
+        transform: rotate(20deg);
+      }
+      .bottom-right {
+        background-image: url(../assets//arrows/arrow-right.svg);
+        top: -65px;
+        right: 80px;
+        transform: scaleX(-1) rotate(-35deg);
       }
     }
 
@@ -79,7 +117,7 @@
       img[src*='bookmark-purple'] {
         opacity: 1;
 
-        transform: translate(25rem, -18rem) scale(1) rotate(22deg);
+        transform: translate(37.9rem, -25rem) scale(1) rotate(22deg);
         transition-delay: 0.1s;
       }
 
@@ -92,7 +130,8 @@
       img[src*='pin'] {
         opacity: 1;
         width: 22.2rem;
-        transform: translate(-18rem, 20rem) scale(1) rotate(-12deg);
+        height: auto;
+        transform: translate(-22.4rem, 15rem) scale(1) rotate(-12deg);
         transition-delay: 0.2s;
       }
     }
