@@ -15,30 +15,84 @@
         margin-inline: 1.6rem;
       }
 
-      .star-icon{
+      .star-icon {
         width: 3.2rem;
         height: 3.2rem;
 
-        filter: drop-shadow(0 0 0.5rem #a06beb59) 
-          drop-shadow(0 0 1.5rem #a667ff5b) 
-          drop-shadow(0 0 3rem #c59bff8a);
-
+        filter: drop-shadow(0 0 0.5rem #a06beb59)
+          drop-shadow(0 0 1.5rem #a667ff5b) drop-shadow(0 0 3rem #c59bff8a);
       }
     }
-    & p{
-        font: var(--txt-1-6) / 140% sans-serif;
-        color: var(--text-body);
-        margin-top: .5rem;
+    & p {
+      font: var(--txt-1-6) / 140% sans-serif;
+      color: var(--text-body);
+      margin-top: 0.5rem;
     }
   }
-
-
-  .content-book{
+  /*serve para deixar o conteudo do position absolute "preso" dentro dele, o conteúdo do absoluto vai ser absoluto dentro do conteudo relativo (pai)*/
+  .content-book {
+    position: relative;
+    width: 100%;
+    height: 60rem;
     margin-top: 22.2rem;
-    .book{
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .principal,
+    .book-op {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 61.7rem;
+      height: 100%;
+    }
+    .principal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+
+      .book {
+        max-width: 50rem;
+        height: auto;
+      }
+    }
+    .book-op {
+      max-width: 17.2rem;
+      height: 53.6rem;
+      z-index: 5;
+
+      img {
+        position: absolute;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+      }
+
+      img[src*='bookmark-purple'] {
+        top: 0;
+        right: -46.8rem;
+        transform: rotate(22deg) translateY(0px);
+      }
+      img[src*='bookmark-yellow'] {
+        top: -10rem;
+        right: -36.8rem;
+        transform: rotate(12deg) translateY(5px);
+      }
+      img[src*='pin'] {
+        width: 100%;
+        max-width: 22.2rem;
+        height: auto;
+
+        top: 84%;
+        right: 58%;
+        transform: rotate(-12deg) translateY(5px);
+      }
+    }
+
+    &:hover .book-op img {
+      opacity: 1;
     }
   }
 }
-
