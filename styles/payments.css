@@ -1,0 +1,9 @@
+.payments{
+    width: 144rem;
+    margin: 0 auto;
+    margin-top: 15rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

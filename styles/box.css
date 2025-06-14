@@ -33,10 +33,10 @@
   /*serve para deixar o conteudo do position absolute "preso" dentro dele, o conteúdo do absoluto vai ser absoluto dentro do conteudo relativo (pai)*/
   .content-book {
     position: relative;
-    width: 100%;
+    width: 70rem;
     height: 60rem;
     margin-top: 22.2rem;
-    margin-inline: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,6 +57,7 @@
 
       .book {
         max-width: 50rem;
+
         height: auto;
       }
     }
@@ -64,75 +65,96 @@
       max-width: 17.2rem;
       height: 53.6rem;
       z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      img {
+      .extra-item {
         position: absolute;
         opacity: 0;
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         top: 50%;
-        left: 50%;
+        left: 80%;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
       }
 
       .label {
         color: var(--text-label);
         font: var(--txt-1-6) / 140% sans-serif;
-        max-width: fit-content;
+        width: 30rem;
 
         & span {
           position: relative;
         }
 
         span::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 18rem;
-          height: 8rem;
+          height: 18rem;
           background-size: contain;
           background-repeat: no-repeat;
         }
       }
       .top-left span::after {
-        background-image: url(../assets//arrows/arrow-top.svg);
-        bottom: -80px;
-        left: -50px;
-        transform: rotate(-25deg);
+        background-image: url(../assets/arrows/arrow-top.svg);
+        top: 4rem;
+        left: 57%;
       }
-      .bottom-left {
-        background-image: url(../assets//arrows/arrow-left.svg);
-        top: -70px;
-        left: 60px;
-        transform: rotate(20deg);
+      .bottom-left span::after {
+        
+        background-image: url(../assets/arrows/arrow-left.svg);
+        top: 4rem;
+        left: 0;
+
       }
-      .bottom-right {
-        background-image: url(../assets//arrows/arrow-right.svg);
-        top: -65px;
-        right: 80px;
-        transform: scaleX(-1) rotate(-35deg);
+      .bottom-right span::after {
+        background-image: url(../assets/arrows/arrow-right.svg);
+        bottom: 4rem;
+        right: -9rem;
+        
       }
     }
 
     &:hover .book-op {
-      img[src*='bookmark-purple'] {
+      img[src*="bookmark-purple"] {
         opacity: 1;
 
-        transform: translate(37.9rem, -25rem) scale(1) rotate(22deg);
+        transform: translate(49rem, -26rem) scale(1) rotate(22deg);
         transition-delay: 0.1s;
       }
 
-      img[src*='bookmark-yellow'] {
+      img[src*="bookmark-yellow"] {
         opacity: 1;
-        transform: translate(28.5rem, -38rem) scale(1) rotate(12deg);
+        transform: translate(40.7rem, -42.7rem) scale(1) rotate(12deg);
         transition-delay: 0s;
       }
 
-      img[src*='pin'] {
+      img[src*="pin"] {
         opacity: 1;
         width: 22.2rem;
         height: auto;
-        transform: translate(-22.4rem, 15rem) scale(1) rotate(-12deg);
+        transform: translate(-17rem, 20rem) scale(1) rotate(-12deg);
         transition-delay: 0.2s;
+      }
+
+      .label.top-left {
+        opacity: 1;
+        transform: translate(-25.2rem, -36rem) scale(1);
+        transition-delay: 0.05s;
+      }
+
+      .label.bottom-left {
+        opacity: 1;
+        transform: translate(-27rem, 3rem) scale(1);
+        transition-delay: 0.25s;
+      }
+
+      .label.bottom-right {
+        opacity: 1;
+        transform: translate(36rem, 45rem) scale(1);
+        transition-delay: 0.15s;
       }
     }
   }
