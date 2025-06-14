@@ -1,9 +1,153 @@
-.payments{
-    width: 144rem;
-    margin: 0 auto;
-    margin-top: 15rem;
-    height: 100vh;
+.payments {
+  max-width: 144rem;
+  height: 100vh;
+  background: url(../assets/pricing-background.png) no-repeat;
+  background-size: cover;
+
+  margin-top: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  > h2 {
+    text-align: center;
+  }
+
+  .pay-contents {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 10rem;
+    z-index: 1;
+
+    .cards {
+      padding: 3.2rem;
+      background-color: var(--shape-base);
+      border: 0.1rem solid var(--shape-stroke);
+      border-radius: 2.4rem;
+      display: flex;
+      flex-direction: column;
+
+      transition: transform 0.3s ease-in-out, z-index 0s 0.15s,
+        background-color 0.2s;
+      position: relative;
+      span {
+        > h2 {
+          font: var(--title-md) / 140% 'Raleway', sans-serif;
+          font-weight: 700;
+          color: var(--text-title);
+          margin: 2.4rem 0 0.8rem 0;
+
+          & strong {
+            font: var(--txt-1-6) / 140% 'Raleway', sans-serif;
+          }
+        }
+        h4 {
+          font: var(--txt-1-6) / 140% 'Raleway', sans-serif;
+          color: var(--blue-light);
+          font-weight: 700;
+        }
+
+        p {
+          color: var(--text-label);
+        }
+      }
+
+      .list {
+        margin-top: 7rem;
+        margin-bottom: 2.4rem;
+        list-style: none;
+      }
+
+      ul li {
+        display: flex;
+        position: relative;
+        padding: 0.6rem 0 0.6rem 2rem;
+        color: var(--text-label);
+        font: var(--txt-1-4) / 140% 'Raleway', sans-serif;
+      }
+
+      .list li::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.8rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        background: url('../assets/icons/star-list.svg') no-repeat center;
+        background-size: contain;
+      }
+
+      button {
+        width: 100%;
+        border-radius: 0.8rem;
+        border: none;
+        padding: 1.2rem 5.2rem;
+        margin-top: auto;
+        cursor: pointer;
+        font: var(--txt-1-4) / 140% 'Raleway', sans-serif;
+        font-weight: 700;
+        color: var(--text-title);
+      }
+    }
+    & .cd-1,
+    .cd-3 {
+      & button {
+        background-color: var(--blue-dark);
+      }
+      & button:hover {
+        background-color: var(--blue-mid);
+      }
+    }
+    .cd-1 {
+      transform: rotate(-8deg);
+    }
+    .cd-3 {
+      transform: rotate(8deg);
+    }
+    & .cd-2 {
+      transform: scale(1.05) translateY(-20px);
+      z-index: 5;
+      & button {
+        background-color: var(--pink-dark);
+      }
+      & button:hover {
+        background-color: var(--pink-base);
+      }
+    }
+    .cards:hover {
+      border: none;
+      background-color: var(--shape-hover);
+      transform: scale(1.08) translateY(0);
+      z-index: 10;
+      transition: transform 0.3s ease-in-out, z-index 0s, background-color 0.2s;
+      box-shadow: 0 0 0px var(--blue-light), 0 0 30px rgba(21, 61, 85, 0.219);
+    }
+    .cd-1:hover {
+      transform: scale(1.05) translateY(-20px) rotate(-8deg);
+    }
+    .cd-2:hover {
+      transform: scale(1.15) translateY(-20px);
+    }
+    .cd-3:hover {
+      transform: scale(1.05) translateY(-20px) rotate(8deg);
+    }
+  }
+}
+.pay-contents::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(
+    circle,
+    rgba(47, 14, 53, 0.705) 0%,
+    rgba(15, 14, 21, 0) 60%
+  );
+  filter: blur(20px);
 }
