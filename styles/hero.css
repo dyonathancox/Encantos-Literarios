@@ -87,7 +87,8 @@ section.hero {
 
 @media (max-width: 430px) {
   section.hero {
-    max-height: 46.4rem;
+    width: 100%;
+    min-height: 46.4rem;
     nav {
       margin-top: 2rem;
       padding: 2rem;
@@ -117,10 +118,10 @@ section.hero {
       }
 
       .book {
-        width: 100%;
-        min-height: 46.4rem;
+        min-width: 100%;
+        min-height: 60vw;
         background: url(../assets/img-mobile.png) no-repeat;
-        background-size: contain;
+        background-size: cover;
       }
     }
   }
