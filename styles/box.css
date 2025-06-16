@@ -246,7 +246,7 @@
 
         .label {
           width: auto;
-          text-align: left;
+          
           font: var(--txt-1-2) / 140% sans-serif;
 
           span::after {
@@ -280,13 +280,14 @@
           }
 
           &.bottom-right {
-            top: 39rem;
-            right: 45rem;
+            top: 40rem;
+            right: -20rem;
+            text-align: right;
             
-
             span::after {
-              top: -5rem;
-              right: 10rem;
+              width: 4.8rem;
+              bottom: -3rem;
+              right: 3rem;
               
             }
           }
