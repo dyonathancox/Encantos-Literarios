@@ -44,8 +44,8 @@ footer {
 
         ul {
             list-style: none;
-            
-            li{
+
+            li {
                 margin-bottom: 1.6rem;
                 color: var(--blue-light);
                 font: var(--txt-1-4) / 140% 'Raleway', sans-serif;
@@ -60,7 +60,7 @@ footer {
                     text-decoration: none;
                 }
 
-                & a:hover{
+                & a:hover {
                     color: var(--blue-base);
                 }
             }
@@ -71,6 +71,21 @@ footer {
                 font: var(--txt-1-6) / 140% 'Raleway', sans-serif;
                 font-weight: 700;
             }
-        }  
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        background: url(../assets/footer-mb.svg) no-repeat;
+        .content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .left {
+                margin-bottom: 2.4rem;
+            }
+        }
     }
 }

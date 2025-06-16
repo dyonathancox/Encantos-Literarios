@@ -47,7 +47,7 @@ body {
   height: 100%;
   margin: 0;
   min-height: 100vh;
-  background-color: var(--shape-base);
+  background-color: var(--shape-background);
   color: var(--text-body);
   font-size: 1.6rem;
   font-family: 'Raleway', sans-serif;

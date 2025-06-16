@@ -2,7 +2,7 @@
   max-width: 144rem;
   height: 100vh;
   background: url(../assets/pricing-background.png) no-repeat;
-  background-size: cover;
+  background-size: 100%;
   margin: 0 auto;
   margin-top: 15rem;
   display: flex;
@@ -110,6 +110,21 @@
     & .cd-2 {
       transform: scale(1.05) translateY(-20px);
       z-index: 5;
+
+      .pop{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > span{
+          background-color: var(--shape-stroke);
+          color: var(--text-title);
+          padding: 0.9rem 2rem;
+          border-radius: 99rem;
+          font: 1rem / 140% "Raleway", sans-serif;
+          font-weight: 700;
+        }
+      }
       & button {
         background-color: var(--pink-dark);
       }
@@ -126,6 +141,7 @@
         height: 2.6rem;
         background: url("../assets/icons/st-bt.svg") no-repeat center;
         background-size: contain;
+        transition: transform .6s ease;
     }
     .cd-1 span::after{
         content: '';
@@ -136,6 +152,7 @@
         height: 1.35rem;
         background: url("../assets/icons/st-top.svg") no-repeat center;
         background-size: contain;
+        transition: transform .6s ease;
     }
     .cd-2::after{
         content: '';
@@ -156,6 +173,7 @@
         height: 2.6rem;
         background: url("../assets/icons/st-bt.svg") no-repeat center;
         background-size: contain;
+        transition: transform .6s ease;
     }
     .cd-3 span::after{
         content: '';
@@ -166,6 +184,7 @@
         height: 1.35rem;
         background: url("../assets/icons/st-top.svg") no-repeat center;
         background-size: contain;
+        transition: transform .6s ease;
     }
     .cards:hover {
       border: none;
@@ -173,16 +192,34 @@
       transform: scale(1.08) translateY(0);
       z-index: 10;
       transition: transform 0.3s ease-in-out, z-index 0s, background-color 0.2s;
-      box-shadow: 0 0 0px var(--blue-light), 0 0 30px rgba(21, 61, 85, 0.219);
+      box-shadow: 0 0 0px var(--blue-light), 0 0 30px rgba(11, 72, 110, 0.425);
     }
     .cd-1:hover {
       transform: scale(1.05) translateY(-20px) rotate(-8deg);
+    }
+    /*MOVENDO A PRIMEIRA ESTRELA*/
+    .cd-1:hover::after{
+      transform: rotate(-24deg);
+      
+    }
+    .cd-1:hover span::after{
+      transform: rotate(24deg);
+      
     }
     .cd-2:hover {
       transform: scale(1.15) translateY(-20px);
     }
     .cd-3:hover {
       transform: scale(1.05) translateY(-20px) rotate(8deg);
+    }
+    /*MOVENDO A SEGUNDA ESTRELA*/
+    .cd-3:hover::after{
+      transform: rotate(24deg);
+      
+    }
+    .cd-3:hover span::after{
+      transform: rotate(-24deg);
+      
     }
   }
 }
@@ -193,12 +230,33 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 1000px;
+  width: 150rem;
+  height: 150rem;
   background: radial-gradient(
     circle,
     rgba(47, 14, 53, 0.705) 0%,
     rgba(15, 14, 21, 0) 60%
   );
-  filter: blur(20px);
+}
+@media (max-width: 767px) {
+  .pay-contents {
+    min-height: 100vh;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    margin-top: 5rem;
+
+    .cards {
+      width: 100%;
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.4rem;
+
+    }
+    .cd-1, .cd-2, .cd-3 {
+      transform: none !important;
+    }
+    
+  }
 }
