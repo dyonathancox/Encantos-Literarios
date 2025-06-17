@@ -5,7 +5,7 @@ footer {
     display: flex;
     background: url(../assets/footer.svg) no-repeat;
     background-size: 100%;
-
+    margin-top: 50rem;
     .content {
         margin: 0 auto;
         display: flex;
@@ -54,8 +54,9 @@ footer {
                 a {
                     color: inherit;
                     text-decoration: none;
+                    cursor: pointer;
                 }
-
+    
                 & a:hover {
                     color: var(--blue-base);
                 }

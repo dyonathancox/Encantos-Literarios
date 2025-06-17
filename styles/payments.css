@@ -1,10 +1,10 @@
 .payments {
   max-width: 144rem;
-  height: 100vh;
+  min-height: 100vh;
   background: url(../assets/pricing-background.png) no-repeat;
   background-size: 100%;
   margin: 0 auto;
-  margin-top: 15rem;
+  margin-top: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
   .pay-contents {
     position: relative;
     display: flex;
-    margin-top: 10rem;
+    margin-top: 25rem;
     z-index: 1;
 
     .cards {
@@ -32,8 +32,8 @@
 
       transition: transform 0.3s ease-in-out, z-index 0s 0.15s,
         background-color 0.2s;
-      
-        span {
+
+      span {
         > h2 {
           font: var(--title-md) / 140% "Raleway", sans-serif;
           font-weight: 700;
@@ -111,12 +111,12 @@
       transform: scale(1.05) translateY(-20px);
       z-index: 5;
 
-      .pop{
+      .pop {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        > span{
+        > span {
           background-color: var(--shape-stroke);
           color: var(--text-title);
           padding: 0.9rem 2rem;
@@ -132,59 +132,59 @@
         background-color: var(--pink-base);
       }
     }
-    .cd-1::after{
-        content: '';
-        position: absolute;
-        top: -2rem;
-        left: -3rem;
-        width: 2.6rem;
-        height: 2.6rem;
-        background: url("../assets/icons/st-bt.svg") no-repeat center;
-        background-size: contain;
-        transition: transform .6s ease;
+    .cd-1::after {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left: -3rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      background: url("../assets/icons/st-bt.svg") no-repeat center;
+      background-size: contain;
+      transition: transform 0.6s ease;
     }
-    .cd-1 span::after{
-        content: '';
-        position: absolute;
-        top: 2rem;
-        left: -4rem;
-        width: 1.3em;
-        height: 1.35rem;
-        background: url("../assets/icons/st-top.svg") no-repeat center;
-        background-size: contain;
-        transition: transform .6s ease;
+    .cd-1 span::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: -4rem;
+      width: 1.3em;
+      height: 1.35rem;
+      background: url("../assets/icons/st-top.svg") no-repeat center;
+      background-size: contain;
+      transition: transform 0.6s ease;
     }
-    .cd-2::after{
-        content: '';
-        position: absolute;
-        top: -4.5rem;
-        left: 4rem;
-        width: 4.5rem;
-        height: 4.5rem;
-        background: url("../assets/icons/bunny.png") no-repeat center;
-        background-size: contain;
+    .cd-2::after {
+      content: "";
+      position: absolute;
+      top: -4.5rem;
+      left: 4rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      background: url("../assets/icons/bunny.png") no-repeat center;
+      background-size: contain;
     }
-    .cd-3::after{
-        content: '';
-        position: absolute;
-        top: 48rem;
-        right: -4rem;
-        width: 2.6rem;
-        height: 2.6rem;
-        background: url("../assets/icons/st-bt.svg") no-repeat center;
-        background-size: contain;
-        transition: transform .6s ease;
+    .cd-3::after {
+      content: "";
+      position: absolute;
+      top: 48rem;
+      right: -4rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      background: url("../assets/icons/st-bt.svg") no-repeat center;
+      background-size: contain;
+      transition: transform 0.6s ease;
     }
-    .cd-3 span::after{
-        content: '';
-        position: absolute;
-        top: 51rem;
-        right: 0rem;
-        width: 1.3em;
-        height: 1.35rem;
-        background: url("../assets/icons/st-top.svg") no-repeat center;
-        background-size: contain;
-        transition: transform .6s ease;
+    .cd-3 span::after {
+      content: "";
+      position: absolute;
+      top: 51rem;
+      right: 0rem;
+      width: 1.3em;
+      height: 1.35rem;
+      background: url("../assets/icons/st-top.svg") no-repeat center;
+      background-size: contain;
+      transition: transform 0.6s ease;
     }
     .cards:hover {
       border: none;
@@ -198,13 +198,11 @@
       transform: scale(1.05) translateY(-20px) rotate(-8deg);
     }
     /*MOVENDO A PRIMEIRA ESTRELA*/
-    .cd-1:hover::after{
+    .cd-1:hover::after {
       transform: rotate(-24deg);
-      
     }
-    .cd-1:hover span::after{
+    .cd-1:hover span::after {
       transform: rotate(24deg);
-      
     }
     .cd-2:hover {
       transform: scale(1.15) translateY(-20px);
@@ -213,13 +211,11 @@
       transform: scale(1.05) translateY(-20px) rotate(8deg);
     }
     /*MOVENDO A SEGUNDA ESTRELA*/
-    .cd-3:hover::after{
+    .cd-3:hover::after {
       transform: rotate(24deg);
-      
     }
-    .cd-3:hover span::after{
+    .cd-3:hover span::after {
       transform: rotate(-24deg);
-      
     }
   }
 }
@@ -239,24 +235,73 @@
   );
 }
 @media (max-width: 767px) {
+  .payments {
+    margin-top: 10rem;
+  }
+
   .pay-contents {
-    min-height: 100vh;
-    flex-direction: row;
+    width: 100%;
+    margin-top: 5rem !important;
+    padding: 2rem 1.6rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 2rem;
-    margin-top: 5rem;
+    scroll-padding: 1.6rem;
+    gap: 1.6rem;
+    justify-content: flex-start;
 
-    .cards {
-      width: 100%;
-      max-width: 40rem;
-      margin: 0 auto;
-      padding: 2.4rem;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
-    }
-    .cd-1, .cd-2, .cd-3 {
-      transform: none !important;
-    }
-    
+  .pay-contents::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  .cards {
+    min-width: 28rem; /* Largura mínima para cada card */
+    scroll-snap-align: start;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  .cd-1,
+  .cd-2,
+  .cd-3 {
+    transform: none !important;
+  }
+
+  .cd-2 {
+    transform: none !important;
+    z-index: 1 !important;
+  }
+
+  /* Ajuste para os elementos decorativos */
+  .cd-1::after,
+  .cd-1 span::after,
+  .cd-2::after,
+  .cd-3::after,
+  .cd-3 span::after {
+    display: none; /* Oculta elementos decorativos em mobile */
+  }
+
+  .cards:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 0 15px rgba(11, 72, 110, 0.425);
+  }
+
+  .pay-contents::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(
+      circle,
+      rgba(47, 14, 53, 0.705) 0%,
+      rgba(15, 14, 21, 0) 60%
+    );
   }
 }

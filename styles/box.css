@@ -20,7 +20,8 @@
         width: 3.2rem;
         height: 3.2rem;
 
-        filter: drop-shadow(0 0 0.5rem #a06beb59) drop-shadow(0 0 1.5rem #a667ff5b) drop-shadow(0 0 3rem #c59bff8a);
+        filter: drop-shadow(0 0 0.5rem #a06beb59)
+          drop-shadow(0 0 1.5rem #a667ff5b) drop-shadow(0 0 3rem #c59bff8a);
       }
     }
 
@@ -108,18 +109,15 @@
       }
 
       .bottom-left span::after {
-
         background-image: url(../assets/arrows/arrow-left.svg);
         top: 4rem;
         left: 0;
-
       }
 
       .bottom-right span::after {
         background-image: url(../assets/arrows/arrow-right.svg);
         bottom: 4rem;
         right: -9rem;
-
       }
     }
 
@@ -174,15 +172,15 @@
   transform: translate(-50%, -50%);
   width: 150rem;
   height: 150rem;
-  background: radial-gradient(circle,
-      rgba(47, 14, 53, 0.705) 0%,
-      rgba(15, 14, 21, 0) 60%);
+  background: radial-gradient(
+    circle,
+    rgba(47, 14, 53, 0.705) 0%,
+    rgba(15, 14, 21, 0) 60%
+  );
 }
 
 @media (max-width: 767px) {
   .box {
-    padding: 2rem;
-
     .content-book {
       display: block;
       position: relative;
@@ -216,7 +214,6 @@
           transition: none !important;
         }
 
-
         img[src*="pin"] {
           width: 9rem;
           height: auto;
@@ -230,7 +227,7 @@
           width: 6.8rem;
           height: auto;
           top: 12rem;
-          left: 25.8rem;
+          left: 23.6rem;
           transform: rotate(12deg) !important;
           z-index: 9;
         }
@@ -239,14 +236,14 @@
           width: 6.8rem;
           height: auto;
           top: 17rem;
-          left: 29.4rem;
+          left: 27rem;
           transform: rotate(22deg) !important;
           z-index: 9;
         }
 
         .label {
           width: auto;
-          
+
           font: var(--txt-1-2) / 140% sans-serif;
 
           span::after {
@@ -257,13 +254,13 @@
           }
 
           &.top-left {
-            top: 12rem;
+            top: 11rem;
             left: 0;
 
             span::after {
-              width: 7rem;
-              top: 2rem;
-              left: 4rem;
+              width: 6rem;
+              top: 3rem;
+              left: 2.5rem;
             }
           }
 
@@ -275,7 +272,6 @@
               width: 4rem;
               top: 2rem;
               left: 2.7rem;
-              
             }
           }
 
@@ -283,12 +279,11 @@
             top: 40rem;
             right: -20rem;
             text-align: right;
-            
+
             span::after {
               width: 4.8rem;
               bottom: -3rem;
               right: 3rem;
-              
             }
           }
         }
@@ -296,7 +291,6 @@
 
       &:hover {
         .book-op {
-
           .extra-item,
           .label {
             opacity: 1;
@@ -306,5 +300,21 @@
         }
       }
     }
+  }
+
+  .content-book::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 50rem;
+    background: radial-gradient(
+      circle,
+      rgba(47, 14, 53, 0.705) 0%,
+      rgba(15, 14, 21, 0) 60%
+    );
   }
 }
