@@ -85,10 +85,11 @@ section.hero {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 767px) {
   section.hero {
     width: 100%;
-    min-height: 46.4rem;
+    min-height: 70vh;
+
     nav {
       margin-top: 2rem;
       padding: 2rem;
@@ -118,9 +119,9 @@ section.hero {
       }
 
       .book {
-        min-width: 100%;
-        min-height: 60vw;
-        background: url(../assets/img-mobile.png) no-repeat;
+        width: 100%;
+        min-height: 70vh;
+        /*background: url(../assets/img-mobile.png) no-repeat;*/
         background-size: cover;
       }
     }

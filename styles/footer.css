@@ -74,6 +74,7 @@ footer {
 
 @media (max-width: 768px) {
     footer {
+        margin-top: 10rem;
         background: url(../assets/footer-mb.svg) no-repeat;
         .content {
             flex-direction: column;
